@@ -1,14 +1,9 @@
 import './App.css';
-import S from './S';
+
 
 function App() {
-  return (
-    <div className="App">
-         <S name="John" />
-         <S name="Jane" />
-         <S name="Jim" />
-    </div>
-  );
-}
 
+    const jsx = <h1>Jsx is awesome !!</h1>
+    return jsx;
+}
 export default App;

@@ -1,13 +1,13 @@
-import React from "react";
 
-function Product(product)
-{
+const Product =({product}) => {
   return(
-    <div>
-    <h1>{product.name}</h1>
-    <h2>{product.description}</h2>
-    <h3>${product.price}</h3>
-    </div>
-  );
-}
+    <li className ="product" >
+      <img src ={product.image} alt= {product.name} />
+      <h2>{product.name}</h2>
+      <p>{product.description}</p>
+      <h4>${product.price}</h4>
+    </li>
+    
+  )
+};
 export default Product;

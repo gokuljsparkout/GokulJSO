@@ -28,3 +28,8 @@ li{
   text-align :center;
   padding :0.2 rem;
 }
+img
+{
+  height: 200px;
+  width :200px;
+}

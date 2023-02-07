@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css'
-import ProductComponent from "./ProductComponent"
+import Welcome from "./Components/Welcome";
 
 function App() {
   return (
     <div className="App">
-      <ProductComponent />
+      <Welcome/>
     </div>
   );
 }

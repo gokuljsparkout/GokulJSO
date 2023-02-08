@@ -1,11 +1,13 @@
 import React from "react";
-import CounterApp from "./Components/CounterApp/CounterApp";
+import Gallery1 from "./Carousel1";
+import  Gallery2 from "./Carousel2"
 
 function App() {
   return (
     <div className="App">
-      <CounterApp/>
-    </div>
+      <Gallery1/>
+      <Gallery2/>
+      </div>
   );
 }
 

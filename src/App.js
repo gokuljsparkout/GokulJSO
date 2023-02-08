@@ -1,10 +1,10 @@
 import React from "react";
-import  Gallery2 from "./Carousel2"
+import Clock from "./Components/Tme";
 
 function App() {
   return (
     <div className="App">
-      <Gallery2/>
+      <Clock/>
       </div>
   );
 }

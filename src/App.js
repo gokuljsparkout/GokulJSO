@@ -1,12 +1,12 @@
 import React from "react";
-import PackingList from "./PackingList";
+import List from "./List";
 
 //Creating a user defined component and event handler for the component
 
 function App() {
   return (
     <div className="App">
-     <PackingList/> 
+     <List/> 
       </div>
   );
 }

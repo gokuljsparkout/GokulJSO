@@ -1,10 +1,12 @@
 import React from "react";
-import Clock from "./Components/Tme";
+import Toolbar from "./ToolBar";
+
+//Creating a user defined component and event handler for the component
 
 function App() {
   return (
     <div className="App">
-      <Clock/>
+      <Toolbar onPlayMovie={()=>alert('Playing')} onUploadImage={()=>alert('Uploading')}/>
       </div>
   );
 }

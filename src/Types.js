@@ -2,9 +2,22 @@ import React from 'react'
 
 //Adding default values
 
-function Types() {
+const Types=()=> {
+
+  const handleSubmit =e=>{
+
+    e.preventDefault(); //Prevents Reloading
+
+    const form =e.target;
+    const formData = new FormData(form); //Reads the form data
+    fetch('/some-api', { method: form.method, body: formData });
+    const formJson = Object.fromEntries(formData.entries());
+    console.log(formJson);
+
+  }
   return (
     <div>
+      <form>
       <label>
         Text input : <input name='myInput' defaultValue='Some Initial Value'></input>
       </label>
@@ -25,9 +38,14 @@ function Types() {
         </label>
 
       </p>
+      <hr/>
       <label>
         Checkbox: <input type="checkbox" name="myCheckbox" defaultChecked={true} />
       </label>
+      <hr/>
+      <button type='reset'>Reset Form</button>
+      <button type='submit' onClick={handleSubmit}>Submit Form</button>
+      </form>
 
     </div>
   )

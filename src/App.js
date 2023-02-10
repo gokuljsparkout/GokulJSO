@@ -1,12 +1,12 @@
 import React from "react";
-import List from "./List";
-
-//Creating a user defined component and event handler for the component
+import Cform from "./Cform";
+import UCform from "./UCform";
 
 function App() {
   return (
     <div className="App">
-     <List/> 
+      <Cform/>
+      <UCform/>
       </div>
   );
 }

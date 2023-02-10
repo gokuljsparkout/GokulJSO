@@ -1,12 +1,10 @@
 import React from "react";
-import Cform from "./Cform";
-import UCform from "./UCform";
+import Types from "./Types";
 
 function App() {
   return (
     <div className="App">
-      <Cform/>
-      <UCform/>
+      <Types/>
       </div>
   );
 }

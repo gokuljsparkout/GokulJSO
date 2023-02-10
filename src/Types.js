@@ -1,18 +1,18 @@
 import React from 'react'
 
-//Types of Inputs
+//Adding default values
 
 function Types() {
   return (
     <div>
       <label>
-        Text input : <input name='myInput'></input>
+        Text input : <input name='myInput' defaultValue='Some Initial Value'></input>
       </label>
       <hr/>
       <p>
         Radio Buttons :
         <label>
-          <input type='radio' name="myRadio" value="option 1"/>
+          <input type='radio' name="myRadio" value="option 1" defaultChecked={true}/>
           Option 1
         </label>
         <label>
@@ -26,7 +26,7 @@ function Types() {
 
       </p>
       <label>
-        Checkbox: <input type="checkbox" name="myCheckbox" />
+        Checkbox: <input type="checkbox" name="myCheckbox" defaultChecked={true} />
       </label>
 
     </div>

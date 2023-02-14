@@ -14,7 +14,7 @@ const TitleCounter = () => {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={handleClick}>Click Me</button>
+  
     </div>
   )
 }

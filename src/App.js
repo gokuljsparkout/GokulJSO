@@ -1,9 +1,10 @@
 import React from "react";
-import TitleCounter from "./TitleCounter";
+import GitHubUser from "./GitHubUser";
+
 function App() {
   return (
     <div className="App">
-    <TitleCounter/>
+      <GitHubUser username='gokuljsparkout'/>
       </div>
   );
 }

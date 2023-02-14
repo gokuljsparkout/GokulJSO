@@ -1,10 +1,9 @@
 import React from "react";
-import GitHubUser from "./GitHubUser";
-
+import MyComponent from "./MyComponent";
 function App() {
   return (
     <div className="App">
-      <GitHubUser username='gokuljsparkout'/>
+      <MyComponent/>
       </div>
   );
 }

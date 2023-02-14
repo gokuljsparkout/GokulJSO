@@ -1,12 +1,9 @@
 import React from "react";
-import { Accordion } from "./Accordion";
-import Acc from "./Acc";
+import TitleCounter from "./TitleCounter";
 function App() {
   return (
     <div className="App">
-      <Accordion/> { /* Renders two Panel Components with independent states */ }
-      <hr/>
-      <Acc/> 
+    <TitleCounter/>
       </div>
   );
 }

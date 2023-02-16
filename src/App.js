@@ -1,9 +1,9 @@
 import React from "react";
-import ParentC from "./ParentC";
+import C from "./C";
 function App() {
   return (
     <div className="App">
-      <ParentC/>
+      <C/>
       </div>
   );
 }

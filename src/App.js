@@ -1,9 +1,9 @@
 import React from "react";
-import MyComponent from "./MyComponent";
+import ParentC from "./ParentC";
 function App() {
   return (
     <div className="App">
-      <MyComponent/>
+      <ParentC/>
       </div>
   );
 }

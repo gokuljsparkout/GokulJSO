@@ -1,11 +1,11 @@
 import React from "react";
-import C from "./C";
+import Clock from "./Clock";
 function App() {
   return (
     <div className="App">
-      <C/>
+      <Clock/>
       </div>
-  );
+  )
 }
 
 export default App;

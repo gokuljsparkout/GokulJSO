@@ -1,9 +1,9 @@
 import React from "react";
-import Clock from "./Clock";
+import Hook from "./Hook";
 function App() {
   return (
     <div className="App">
-      <Clock/>
+      <Hook a={8} b={8}/>
       </div>
   )
 }

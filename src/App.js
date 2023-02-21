@@ -1,9 +1,9 @@
 import React from "react";
-import ParentC from "./ParentC";
+import Counter from "./Counter";
 function App() {
   return (
     <div className="App">
-      <ParentC/>
+      <Counter/>
       </div>
   )
 }

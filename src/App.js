@@ -1,9 +1,9 @@
 import React from "react";
-import Hook from "./Hook";
+import ParentC from "./ParentC";
 function App() {
   return (
     <div className="App">
-      <Hook a={8} b={8}/>
+      <ParentC/>
       </div>
   )
 }

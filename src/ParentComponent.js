@@ -1,28 +1,24 @@
-import React, {useMemo,useState} from 'react';
+import React, {useEffect,useState} from 'react';
 import ChildComponent from './ChildComponent';
 
 function ParentComponent() {
   const [someProp, setSomeProp] = useState('');
+  const [count, setCount] = useState(0);
 
-  const memoizedCount = useMemo(() => { //useMemo
-    let count = 0;
-    return someProp => {
-      if (someProp !== '') {
-        count++;
-      }
-      return count;
-    };
-  }, []);
+  useEffect(()=>{
+    if(someProp !== ''){
+      setCount(count=>count+1)
+    }
+  },[someProp])
 
-  const count = memoizedCount(someProp);
-
-  const handleChange = event => {
-    setSomeProp(event.target.value);
-  };
+  function handleChange(event)
+  {
+    setSomeProp(event.target.value)
+  }
 
   return (
     <div>
-      <h1>useMemo</h1>
+      <h1>useEffect</h1>
       <label>
         Parent Component:
         <input type="text" value={someProp} onChange={handleChange} />

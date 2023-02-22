@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ChildComponent from './ChildComponent';
 
-//getDerivedStatefromprops Lifecycle Method
+//componentWillReceiveProps Lifecycle Method
 
 class ParentComponent extends Component {
   state = {
@@ -24,7 +24,7 @@ class ParentComponent extends Component {
         <ChildComponent someProp={this.state.someProp} />
       </div>
     );
-  }
+}
 }
 
 export default ParentComponent;

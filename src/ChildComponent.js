@@ -2,24 +2,21 @@ import React, { Component } from 'react';
 
 class ChildComponent extends Component {
   state = {
-    count: 0,
-    prevSomeProp: ''
+    count: 0
   };
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.someProp !== prevState.prevSomeProp) {
-      return {
-        count: prevState.count + 1,
-        prevSomeProp: nextProps.someProp
-      };
+  componentWillReceiveProps(nextProps) {
+    if (this.props.someProp !== nextProps.someProp) {
+      this.setState({
+        count: this.state.count + 1
+      });
     }
-    return null;
   }
 
   render() {
     return (
       <div>
-        <h1>Child Component:</h1>
+        <p>Child Component:</p>
         <p>Received someProp: {this.props.someProp}</p>
         <p>Count: {this.state.count}</p>
       </div>

@@ -1,30 +1,36 @@
-import React, { Component } from 'react';
+import React, {useMemo,useState} from 'react';
 import ChildComponent from './ChildComponent';
 
-//componentWillReceiveProps Lifecycle Method
+function ParentComponent() {
+  const [someProp, setSomeProp] = useState('');
 
-class ParentComponent extends Component {
-  state = {
-    someProp: ''
+  const memoizedCount = useMemo(() => { //useMemo
+    let count = 0;
+    return someProp => {
+      if (someProp !== '') {
+        count++;
+      }
+      return count;
+    };
+  }, []);
+
+  const count = memoizedCount(someProp);
+
+  const handleChange = event => {
+    setSomeProp(event.target.value);
   };
 
-  handleChange = event => {
-    this.setState({
-      someProp: event.target.value
-    });
-  };
+  return (
+    <div>
+      <h1>useMemo</h1>
+      <label>
+        Parent Component:
+        <input type="text" value={someProp} onChange={handleChange} />
+      </label>
+      <ChildComponent someProp={someProp} count={count} />
+    </div>
+  )
+}
 
-  render() {
-    return (
-      <div>
-        <label>
-          Parent Component: 
-          <input type="text" value={this.state.someProp} onChange={this.handleChange} />
-        </label>
-        <ChildComponent someProp={this.state.someProp} />
-      </div>
-    );
-}
-}
 
 export default ParentComponent;

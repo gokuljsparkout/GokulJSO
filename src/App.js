@@ -1,11 +1,17 @@
 import React from "react";
-import ParentComponent from "./ParentComponent";
-function App() {
+import ThemeButton from "./ThemeButton";
+import ThemeProvider from "./ThemeProvider";
+
+//useContext
+function App()
+{
   return (
     <div className="App">
-      <ParentComponent/>
+      <ThemeProvider>
+      <ThemeButton/>
+      </ThemeProvider>
+      
       </div>
   )
 }
-
 export default App;

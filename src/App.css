@@ -1,35 +1,32 @@
-li{
-  list-style:none;
-}
-
-.App{
-  text-align: center;
-
-}
-.Container
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Container > li{
-  border: 1px solid white;
-  border-radius:4px;
-  margin: 0.5 rem; 
-  padding : 0.5 rem;
-}
-
-.skills{
+nav {
+  background-color: #333;
+  color: #fff;
   display: flex;
 }
 
-.skills > li{
-  text-align :center;
-  padding :0.2 rem;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
-img
-{
-  height: 200px;
-  width :200px;
+
+nav ul li {
+  margin-right: 1rem;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  display: inline-block;
+}
+
+nav a.active {
+  background-color: #fff;
+  color: #333;
 }

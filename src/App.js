@@ -2,22 +2,22 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function App() {
-  const [data, setData] = useState([]);
+  const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchUsers = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-        setData(response.data);
+        const response = await axios.get('https://randomuser.me/api/?results=10');
+        setUsers(response.data.results);
       } catch (error) {
         setError(error);
       }
       setIsLoading(false);
     };
-    fetchData();
+    fetchUsers();
   }, []);
 
   if (isLoading) {
@@ -30,10 +30,12 @@ function App() {
 
   return (
     <div>
-      <h1>API Call Example</h1>
+      <h1>List of Random Users</h1>
       <ul>
-        {data.map((item) => (
-          <li key={item.id}>{item.name}</li>
+        {users.map((user) => (
+          <li key={user.login.uuid}>
+            {user.name.first} {user.name.last}
+          </li>
         ))}
       </ul>
     </div>

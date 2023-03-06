@@ -1,44 +1,36 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import './App.css';
+import {useState } from 'react';
+import Keypad from "./Keypad";
 
 function App() {
-  return (
-    <Router>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/"  exact activeClassName="active">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" activeClassName="active">About</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-          </li>
-        </ul>
-      </nav>
+  const[input,setInput]=useState('');
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+  const handleClick =(value)=>{
+    setInput(input+value);
+  }
+
+  const handleEqual = () =>
+  {
+    const result = eval(input);
+    setInput(result.toString());
+  }
+  const handleClear = () =>
+  {
+    setInput('');
+  }
+
+  return (
+    <div>
+      <div>
+        <input type='text' value={input} readOnly></input>
+        <Keypad 
+        handleClear={handleClear}
+        handleClick={handleClick}
+        handleEqual={handleEqual}>
+        </Keypad>
+      </div>
+    </div>
+   
   );
 }
-
-function Home() {
-  return <h1>Welcome to the Home page!</h1>;
-}
-
-function About() {
-  return <h1>About Us</h1>;
-}
-
-function Contact() {
-  return <h1>Contact Us</h1>;
-}
-
-
 export default App;

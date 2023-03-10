@@ -1,37 +1,19 @@
-import React from "react";
-import {useState } from 'react';
-import Keypad from "./Keypad";
-import './App.css';
+import { useRef } from 'react';
+import MyInput from './MyInput.js';
 
-function App() {
-  const[input,setInput]=useState('');
+export default function Form() {
+  const ref = useRef(null);
 
-  const handleClick =(value)=>{
-    setInput(input+value);
-  }
-
-  const handleEqual = () =>
-  {
-    const result = eval(input);
-    setInput(result.toString());
-  }
-  const handleClear = () =>
-  {
-    setInput('');
+  function handleClick() {
+    ref.current.focus();
   }
 
   return (
-    <div>
-      <div>
-        <input type='text' value={input} readOnly></input>
-        <Keypad 
-        handleClear={handleClear}
-        handleClick={handleClick}
-        handleEqual={handleEqual}>
-        </Keypad>
-      </div>
-    </div>
-
+    <form>
+      <MyInput label="Enter your name:" ref={ref} />
+      <button type="button" onClick={handleClick}>
+        Edit
+      </button>
+    </form>
   );
 }
-export default App;

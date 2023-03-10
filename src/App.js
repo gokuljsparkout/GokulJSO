@@ -1,23 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Book from './Book';
+import React from "react";
+import {useState } from 'react';
+import Keypad from "./Keypad";
+import './App.css';
 
-
-Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  publicationDate: PropTypes.instanceOf(Date).isRequired
-};
 function App() {
+  const[input,setInput]=useState('');
+
+  const handleClick =(value)=>{
+    setInput(input+value);
+  }
+
+  const handleEqual = () =>
+  {
+    const result = eval(input);
+    setInput(result.toString());
+  }
+  const handleClear = () =>
+  {
+    setInput('');
+  }
+
   return (
     <div>
-      <h1>My Favorite Books</h1>
-      <Book title="The Great Gatsby" author="F. Scott Fitzgerald" publicationDate={new Date(1925, 3, 10)} />
-      {/* <Book title="To Kill a Mockingbird" author="Harper Lee" publicationDate="1960-07-11" /> this line will cause the error */}
-      <Book title="To Kill a Mockingbird" author="Harper Lee" publicationDate={new Date(1960, 7, 11)} />
-      <Book title="1984" author="George Orwell" publicationDate={new Date(1949, 6, 8)} />
+      <div>
+        <input type='text' value={input} readOnly></input>
+        <Keypad 
+        handleClear={handleClear}
+        handleClick={handleClick}
+        handleEqual={handleEqual}>
+        </Keypad>
+      </div>
     </div>
+
   );
 }
-
 export default App;

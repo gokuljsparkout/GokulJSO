@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GokulJSO/static/css/main.a90456a6.css",
+    "main.js": "/GokulJSO/static/js/main.ac06cfbb.js",
+    "index.html": "/GokulJSO/index.html",
+    "main.a90456a6.css.map": "/GokulJSO/static/css/main.a90456a6.css.map",
+    "main.ac06cfbb.js.map": "/GokulJSO/static/js/main.ac06cfbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a90456a6.css",
+    "static/js/main.ac06cfbb.js"
+  ]
+}

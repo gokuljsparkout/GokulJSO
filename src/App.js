@@ -1,19 +1,12 @@
-import { useRef } from 'react';
-import MyInput from './MyInput.js';
+import React from 'react'
+import MyComponent from './MyComponent'
 
-export default function Form() {
-  const ref = useRef(null);
-
-  function handleClick() {
-    ref.current.focus();
-  }
-
+const App = () => {
   return (
-    <form>
-      <MyInput label="Enter your name:" ref={ref} />
-      <button type="button" onClick={handleClick}>
-        Edit
-      </button>
-    </form>
-  );
+    <div>
+      <MyComponent/>
+    </div>
+  )
 }
+
+export default App

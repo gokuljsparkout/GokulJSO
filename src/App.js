@@ -1,10 +1,10 @@
 import React from 'react'
-import Calculator from './Calculator'
+import MyComponent from './MyComponent'
 
 const App = () => {
   return (
     <div>
-      <Calculator/>
+      <MyComponent name="Gokul" city ="Coimbatore" />
     </div>
   )
 }

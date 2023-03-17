@@ -2,26 +2,32 @@ import React, { Component } from 'react'
 
 class Calculator extends Component {
 
-  constructor(props){
-    super(props);
-    this.state={
-      value1: this.props.value1,
-      value2 : this.props.value2,
-      result : 0
-    }
-    this.handleChangeValue1=this.handleChangeValue1.bind(this);
-    this.handleChangeValue2=this.handleChangeValue2.bind(this);
-    this.calculate = this.calculate.bind(this);
+  // constructor(props){
+  //   super(props);
+  //   this.state={
+  //     value1: this.props.value1,
+  //     value2 : this.props.value2,
+  //     result : 0
+  //   }
+  //   this.handleChangeValue1=this.handleChangeValue1.bind(this);
+  //   this.handleChangeValue2=this.handleChangeValue2.bind(this);
+  //   this.calculate = this.calculate.bind(this);
+  // }
+
+  state={
+    value1 : this.props.value1,
+    value2 : this.props.value2,
+    result : 0 
   }
-  handleChangeValue1(e){
+  handleChangeValue1= (e)=>{
     this.setState({value1: e.target.value});
   }
 
-  handleChangeValue2(e){
+  handleChangeValue2=(e)=>{
     this.setState({value2 : e.target.value})
   }
 
-  calculate(e){
+  calculate = (e)=>{
     e.preventDefault();
     this.setState({result : Number.parseInt(this.state.value1)+  Number.parseInt(this.state.value2)})
   }

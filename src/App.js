@@ -1,10 +1,10 @@
 import React from 'react'
-import MyComponent from './MyComponent'
+import Calculator from './Calculator'
 
 const App = () => {
   return (
     <div>
-      <MyComponent/>
+      <Calculator/>
     </div>
   )
 }

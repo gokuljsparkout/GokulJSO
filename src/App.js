@@ -1,41 +1,31 @@
-import React, { useState, useCallback } from 'react'
-var funccount = new Set();
+import React from 'react';
+import './App.css';
+
 const App = () => {
- 
- 
-  const [count, setCount] = useState(0)
-  const [number, setNumber] = useState(0)
- 
-const incrementCounter = useCallback(() => {
-  setCount(count + 1)
-}, [count])
-const decrementCounter = useCallback(() => {
-  setCount(count - 1)
-}, [count])
-const incrementNumber = useCallback(() => {
-  setNumber(number + 1)
-}, [number])
-   
-funccount.add(incrementCounter);
-funccount.add(decrementCounter);
-funccount.add(incrementNumber);
-alert(funccount.size);
- 
+
+  const handleClick = event=>{
+    const el = event.currentTarget;
+    console.log(el);
+    el.textContent = 'GO';
+
+    setTimeout(()=>{el.classList.add('circle')
+    setTimeout(()=>{el.classList.add('red')
+    setTimeout(() => {el.classList.remove('circle')
+    setTimeout(() => {el.classList.remove("red");
+                      el.classList.add("purple");
+                      setTimeout(()=> {el.classList.add("fadeOut")
+  },300)
+  },300)
+  },250)
+  },500)
+  },2000)
+    
+    
+    
+   }
   return (
-    <div>
-      Count: {count}
-      <button onClick={incrementCounter}>
-         Increase counter
-      </button>
-      <button onClick={decrementCounter}>
-         Decrease Counter
-      </button>
-      <button onClick={incrementNumber}>
-         increase number
-      </button>
-    </div>
+    <div className='go' onClick={handleClick}>Click Me</div>
   )
 }
- 
- 
-export default App;
+
+export default App

@@ -1,53 +1,25 @@
-/* center the calculator on the page */
-.calculator {
-  margin: 0 auto;
-  max-width: 400px;
-  border: 2px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
+.go{
+  margin: 1rem;
+  background: blue;
+  color : white;
+  padding: 5rem;
+  width: 25rem;
+  height: 25rem;
+  transition: all 0.2s
 }
 
-/* style the input field */
-input {
-  display: block;
-  margin: 0 auto 20px;
-  padding: 10px;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  border: 2px solid #ccc;
-  width: 100%;
-  text-align: right;
+.go.circle{
+  border-radius: 50%;
 }
 
-/* style the keypad buttons */
-button {
-  padding: 10px;
-  font-size: 1.2rem;
-  margin: 5px;
-  border: none;
-  border-radius: 5px;
-  width: 75px;
-  height: 75px;
-  background-color: #eee;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+.go.red {
+  background: red;
 }
 
-/* change the button background and text color when hovered */
-button:hover {
-  background-color: #333;
-  color: #fff;
+.go.purple {
+  background: purple;
+  color: white;
 }
-
-/* style the clear button */
-button.clear {
-  background-color: #ff6666;
-  color: #fff;
-}
-
-/* style the equals button */
-button.equals {
-  background-color: #44c767;
-  color: #fff;
+.go.fadeOut {
+  opacity: 0;
 }

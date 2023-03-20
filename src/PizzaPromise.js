@@ -11,15 +11,12 @@ const PizzaPromise = () => {
   });
   return pizzaPromise;
 }
-makePizza(['pepperoni']).then((pizza)=>{
-  console.log(pizza);
-  return makePizza(['ham','cheese'])
-}).then((pizza)=>{
-  console.log(pizza)
-  return makePizza(['pineapple','apple','meat','olive'])
-}).then((pizza)=>{
-  console.log(pizza);
-})
+const pizzaPromise1 = makePizza(['pepperoni']);
+const pizzaPromise2 =makePizza(['ham','cheese']);
+const pizzaPromise3 =makePizza(['pineapple','apple','meat','olive']);
+
+const dinnerPromise = Promise.all([pizzaPromise1,pizzaPromise2,pizzaPromise3]);
+dinnerPromise.then((pizza)=>console.log(pizza));
   return (
     <div></div>
   )

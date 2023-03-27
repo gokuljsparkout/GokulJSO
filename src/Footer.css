@@ -1,0 +1,17 @@
+.footer_brand{
+  font-size : 23px;
+font-weight : 800;
+color : #29f700;
+}
+
+footer{
+  position: relative;
+  z-index: 100;
+}
+
+.scrl{
+  color: #0d6efd;
+  margin-bottom: 2px;
+  text-decoration: underline;
+  cursor: pointer;
+}

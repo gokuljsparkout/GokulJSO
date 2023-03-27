@@ -8,6 +8,8 @@ const ProductDetailsPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
 
+  const { title, description, price, images } = product || {};
+
   useEffect(() => {
     const fetchProductsById = async () => {
       try {
@@ -33,24 +35,24 @@ const ProductDetailsPage = () => {
           <div className="box">
             <div className="images">
               <div className="img-holder active">
-                <img src={product.images[0]} alt={product.title} />
+                <img src={images[0]} alt={title} />
               </div>
               <div className="img-holder">
-                <img src={product.images[1]} alt={product.title} />
+                <img src={images[1]} alt={title} />
               </div>
               <div className="img-holder">
-                <img src={product.images[2]} alt={product.title} />
+                <img src={images[2]} alt={title} />
               </div>
               <div className="img-holder">
-                <img src={product.images[3]} alt={product.title} />
+                <img src={images[3]} alt={title} />
               </div>
             </div>
             <div className="basic-info">
-              <h1>{product.title}</h1>
+              <h1>{title}</h1>
               <div className="description">
-                <p>{product.description}</p>
+                <h4>{description}</h4>
               </div>
-              <span>${product.price}</span>
+              <span>${price}</span>
               <div className="options">
                 <a href="#category">Buy now</a>
               </div>

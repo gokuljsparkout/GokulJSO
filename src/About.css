@@ -1,0 +1,16 @@
+#about {
+  background: linear-gradient(rgba(28, 60, 123, 260) 30%, rgba(46, 249, 7, 1));
+}
+
+#about h1 {
+  font-weight: 800;
+  font-size: 50px;
+  color: white;
+}
+#about p {
+  color: white;
+}
+
+#about img {
+  align-items: center !important;
+}

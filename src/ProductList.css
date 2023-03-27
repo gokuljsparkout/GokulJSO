@@ -1,4 +1,3 @@
-
 .card-img-top {
   height: 200px;
   object-fit: cover;
@@ -7,6 +6,7 @@
 .card-title {
   font-size: 1.2rem;
   margin-top: 10px;
+  text-transform: capitalize;
 }
 
 .card-price {
@@ -39,3 +39,10 @@ li {
   margin-bottom: 1rem;
 }
 
+.btn-primary {
+  color: black;
+  font-size: 17px;
+  background-color: #29f700 !important;
+  border-color: grey;
+  font-weight: 600;
+}

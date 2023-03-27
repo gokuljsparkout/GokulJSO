@@ -5,6 +5,8 @@ import ProductCategory from "./ProductCategory";
 import ProductList from "./ProductList";
 import Loader from "./Loader";
 
+
+
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
 
@@ -24,9 +26,7 @@ const AllProducts = () => {
     fetchProducts();
   }, []);
 
-  const categoryNames = [
-    ...new Set(products.map((product) => product.category)),
-  ];
+  const categoryNames = [...new Set(products.map(({ category }) => category))];
 
   if (products.length === 0) {
     return <Loader />;
@@ -41,7 +41,7 @@ const AllProducts = () => {
           {categoryNames.map((categoryName) => {
             // Filter products by category
             const categoryProducts = products.filter(
-              (product) => product.category === categoryName
+              ({ category }) => category === categoryName
             );
 
             return (

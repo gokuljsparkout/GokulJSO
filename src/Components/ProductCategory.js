@@ -12,7 +12,6 @@ const ProductCategory = ({ category }) => {
           marginBottom: "20px",
           backgroundColor: "lightgrey",
         }}
-        id={`${category}`}
       >
         {category}
       </h2>

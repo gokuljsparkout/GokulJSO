@@ -9,13 +9,18 @@ const Category = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get(`https://dummyjson.com/products/category/$categoryName}`)
-      .then(response => {
-        console.log(response);
-        const data = response.data;
-        setProducts(data.products);
-      })
-      .catch(error => console.error(error));
+    fetch(`https://dummyjson.com/products/category/${categoryName}`)
+    .then(response => response.json())
+    .then(data => setProducts(data.products))
+    .catch(error => console.error(error));
+
+    // axios.get(`https://dummyjson.com/products/category/${categoryName}`)
+    //   .then(response => {
+    //     console.log(response.json());
+    //     const data = response.data;
+    //     setProducts(data.products);
+    //   })
+    //   .catch(error => console.error(error));
   }, [categoryName]);
 
   if (products.length === 0) {
@@ -29,7 +34,7 @@ const Category = () => {
   return (
     <section id='product'>
       <div className='container m-5'>
-        <h1 className='text-center my-5'>{categoryName} PRODUCTS</h1>
+        <h1 className='text-center my-5'>{categoryName}</h1>
         <ul className="row">
           {products.map((product) => (
             <ProductList key={product.id} product={product} />

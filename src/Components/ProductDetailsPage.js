@@ -18,12 +18,10 @@ const ProductDetailsPage = () => {
       .catch(error => console.error(error))
   }, [id])
 
-  if (product) {
+  if (!product) {
     return (
-        <div className="container">
-        <div className="loader-container">
-          <div className="spinner"></div>
-        </div>
+        <div>
+            Loading.....
         </div>
     )
   }

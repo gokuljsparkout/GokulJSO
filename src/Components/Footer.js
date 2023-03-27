@@ -43,12 +43,12 @@ const Footer = () => {
           <div className="col-md-3">
             <h4>Follow Us</h4>
             <ul className="list-unstyled">
-              <li><a href="#"><FaFacebook className="me-2" />Facebook</a></li>
-              <li><a href="#"><FaTwitter className="me-2" />Twitter</a></li>
-              <li><a href="#"><FaGoogle className="me-2" />Google</a></li>
-              <li><a href="#"><FaInstagram className="me-2" />Instagram</a></li>
-              <li><a href="#"><FaLinkedin className="me-2" />LinkedIn</a></li>
-              <li><a href="#"><FaGithub className="me-2" />GitHub</a></li>
+              <li><a href='/'><FaFacebook className="me-2" />Facebook</a></li>
+              <li><a href='/'><FaTwitter className="me-2" />Twitter</a></li>
+              <li><a href="/"><FaGoogle className="me-2" />Google</a></li>
+              <li><a href="/"><FaInstagram className="me-2" />Instagram</a></li>
+              <li><a href="/"><FaLinkedin className="me-2" />LinkedIn</a></li>
+              <li><a href="/"><FaGithub className="me-2" />GitHub</a></li>
             </ul>
           </div>
         </div>

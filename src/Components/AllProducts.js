@@ -3,27 +3,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ProductCategory from "./ProductCategory";
 import ProductList from "./ProductList";
+import Loader from "./Loader";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('https://dummyjson.com/products?limit=100')
-      .then(response => response.json())
-      .then(data => setProducts(data.products))
-      .catch(error => console.error(error));
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('https://dummyjson.com/products?limit=100');
+        const data = await response.json();
+        setProducts(data.products);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  
+    fetchProducts();
   }, []);
-
+  
   
   const categoryNames = [...new Set(products.map(product => product.category))];
 
   if (products.length === 0) {
     return (
-    <div className="container">
-    <div className="loader-container">
-      <div className="spinner"></div>
-    </div>
-    </div>
+      <Loader/>
     )
   }
 

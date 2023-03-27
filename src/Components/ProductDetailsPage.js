@@ -6,6 +6,7 @@ import NavBar from './NavBar'
 import '../Nav.css'
 import '../Footer.css'
 import '../ProductDetailsPage.css'
+import Loader from './Loader'
 
 const ProductDetailsPage = () => {
   const { id } = useParams() 
@@ -20,16 +21,11 @@ const ProductDetailsPage = () => {
 
   if (!product) {
     return (
-        <div>
-            Loading.....
-        </div>
-    )
+        <Loader/>    )
   }
 
   return (
     <>
-
-    <NavBar/>
     <section id=''>
     <div class="container">
         <div class="box">
@@ -68,8 +64,6 @@ const ProductDetailsPage = () => {
         </div>
     </div>
     </section>
-
-    <Footer/>
     
     </>
 

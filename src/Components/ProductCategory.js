@@ -3,7 +3,7 @@ import React from 'react';
 const ProductCategory = ({ category }) => {
   return (
     <div className='header'>
-      <h3 className="text-center">{category}</h3>
+      <h2 className="text-center" style={{ textAlign: 'center', borderBottom: '1px solid grey', paddingBottom: '10px', marginBottom: '20px',backgroundColor:'lightgrey' }} id={`${category}`}>{category}</h2>
     </div>
   );
 };

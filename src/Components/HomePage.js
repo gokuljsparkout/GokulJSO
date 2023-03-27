@@ -1,21 +1,15 @@
-import React from 'react'
-import About from './About'
-import Footer from './Footer'
-import Home from './Home'
-import NavBar from './NavBar'
-import AllProducts from './AllProducts'
+import React from 'react';
+import About from './About';
+import Home from './Home';
+import AllProducts from './AllProducts';
 
-const HomePage = () => {
-
-
+const HomePage = ()=> {
   return (
-    <div>
-      
-      <Home/>
-      <AllProducts/>
-      <About/>
-    </div>
-  )
+    <>
+      <Home />
+      <AllProducts />
+      <About />
+    </>
+  );
 }
-
-export default HomePage
+export default HomePage;

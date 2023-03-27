@@ -4,6 +4,8 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
+import '../Footer.css'
+
 const Footer = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';

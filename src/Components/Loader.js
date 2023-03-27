@@ -1,5 +1,5 @@
 import React from 'react'
-import "../loader.css"
+import "../Loader.css"
 
 const Loader = () => {
   return (
@@ -7,6 +7,7 @@ const Loader = () => {
     <img className='loader_image'
       
       src="https://cdn.dribbble.com/users/115601/screenshots/5356365/loading.gif"
+      alt='Loading...'
       
     />
   </div>

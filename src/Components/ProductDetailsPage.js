@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import Footer from './Footer'
-import NavBar from './NavBar'
-import '../Nav.css'
-import '../Footer.css'
 import '../ProductDetailsPage.css'
 import Loader from './Loader'
 
@@ -13,51 +9,53 @@ const ProductDetailsPage = () => {
   const [product, setProduct] = useState(null)
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/products/${id}`)
-      .then(response => response.json())
-      .then(data => setProduct(data))
-      .catch(error => console.error(error))
-  }, [id])
+    const fetchProductsById = async() => {
+        try{
+            const response = await fetch(`https://dummyjson.com/products/${id}`);
+            const data = await response.json();
+            setProduct(data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+    
+    fetchProductsById();
+}, [id]);
+
 
   if (!product) {
     return (
-        <Loader/>    )
+        <Loader/>
+        )
   }
 
   return (
     <>
-    <section id=''>
-    <div class="container">
-        <div class="box">
-            <div class="images">
-                <div class="img-holder active">
-                    <img src={product.images[0]}/>
+    <section id='category'>
+    <div className="container">
+        <div className="box">
+            <div className="images">
+                <div className="img-holder active">
+                    <img src={product.images[0]} alt={product.title} />
                 </div>
-                <div class="img-holder">
-                    <img src={product.images[1]}/>
+                <div className="img-holder">
+                    <img src={product.images[1]} alt={product.title} />
                 </div>
-                <div class="img-holder">
-                    <img src={product.images[2]}/>
+                <div className="img-holder">
+                    <img src={product.images[2]} alt={product.title} />
                 </div>
-                <div class="img-holder">
-                    <img src={product.images[3]}/>
+                <div className="img-holder">
+                    <img src={product.images[3]} alt={product.title} />
                 </div>
             </div>
-            <div class="basic-info">
+            <div className="basic-info">
                 <h1>{product.title}</h1>
-                <div class="rate">
-                    <i class="filled fas fa-star"></i>
-                    <i class="filled fas fa-star"></i>
-                    <i class="filled fas fa-star"></i>
-                    <i class="filled fas fa-star"></i>
-                    <i class="filled fas fa-star"></i>
-                </div>
-                <div class="description">
+                <div className="description">
                 <p>{product.description}</p>
             </div>
                 <span>${product.price}</span>
-                <div class="options">
-                    <a href="#">Buy now</a>
+                <div className="options">
+                    <a href="#category">Buy now</a>
                 </div>
             </div>
             

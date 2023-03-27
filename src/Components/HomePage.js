@@ -1,9 +1,9 @@
-import React from 'react';
-import About from './About';
-import Home from './Home';
-import AllProducts from './AllProducts';
+import React from "react";
+import About from "./About";
+import Home from "./Home";
+import AllProducts from "./AllProducts";
 
-const HomePage = ()=> {
+const HomePage = () => {
   return (
     <>
       <Home />
@@ -11,5 +11,5 @@ const HomePage = ()=> {
       <About />
     </>
   );
-}
+};
 export default HomePage;

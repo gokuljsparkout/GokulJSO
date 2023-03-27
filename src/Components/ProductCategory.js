@@ -1,9 +1,21 @@
-import React from 'react';
+import React from "react";
 
 const ProductCategory = ({ category }) => {
   return (
-    <div className='header'>
-      <h2 className="text-center" style={{ textAlign: 'center', borderBottom: '1px solid grey', paddingBottom: '10px', marginBottom: '20px',backgroundColor:'lightgrey' }} id={`${category}`}>{category}</h2>
+    <div className="header">
+      <h2
+        className="text-center"
+        style={{
+          textAlign: "center",
+          borderBottom: "1px solid grey",
+          paddingBottom: "10px",
+          marginBottom: "20px",
+          backgroundColor: "lightgrey",
+        }}
+        id={`${category}`}
+      >
+        {category}
+      </h2>
     </div>
   );
 };

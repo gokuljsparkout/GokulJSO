@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import ProductCategory from "./ProductCategory";
 import ProductList from "./ProductList";
 import Loader from "./Loader";
@@ -11,30 +11,31 @@ const AllProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://dummyjson.com/products?limit=100');
+        const response = await fetch(
+          "https://dummyjson.com/products?limit=100"
+        );
         const data = await response.json();
         setProducts(data.products);
       } catch (error) {
         console.error(error);
       }
     };
-  
+
     fetchProducts();
   }, []);
-  
-  
-  const categoryNames = [...new Set(products.map(product => product.category))];
+
+  const categoryNames = [
+    ...new Set(products.map((product) => product.category)),
+  ];
 
   if (products.length === 0) {
-    return (
-      <Loader/>
-    )
+    return <Loader />;
   }
 
   return (
-    <section id='product'>
-      <div className='container m-5'>
-        <h1 className='text-center my-5'>OUR PRODUCTS</h1>
+    <section id="product">
+      <div className="container m-5">
+        <h1 className="text-center my-5">OUR PRODUCTS</h1>
         <ul className="row">
           {/* Loop through the category names */}
           {categoryNames.map((categoryName) => {
@@ -48,13 +49,17 @@ const AllProducts = () => {
                 <ProductCategory category={categoryName} />
 
                 <div className="row">
-                 
                   {categoryProducts.slice(0, 3).map((product) => (
                     <ProductList key={product.id} product={product} />
                   ))}
                 </div>
                 <div className="text-center mb-4">
-                  <Link to={`/products/category/${categoryName}`} className="bn47">See More</Link>
+                  <Link
+                    to={`/products/category/${categoryName}`}
+                    className="bn47"
+                  >
+                    See More
+                  </Link>
                 </div>
               </li>
             );

@@ -1,24 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import './App.css';
+import "./App.css";
 
-import NavBar from './Components/NavBar';
-import HomePage from './Components/HomePage';
-import ProductDetailsPage from './Components/ProductDetailsPage';
-import Category from './Components/Category';
-import Footer from './Components/Footer';
+import NavBar from "./Components/NavBar";
+import HomePage from "./Components/HomePage";
+import ProductDetailsPage from "./Components/ProductDetailsPage";
+import Category from "./Components/Category";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
     <Router>
-      <NavBar/>
+      <NavBar />
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/product/:id' element={<ProductDetailsPage />} />
-        <Route path='/products/category/:categoryName' element={<Category />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/product/:id" element={<ProductDetailsPage />} />
+        <Route path="/products/category/:categoryName" element={<Category />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 };

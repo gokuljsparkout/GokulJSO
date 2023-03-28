@@ -2,7 +2,7 @@ import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 
-import "../NavBar.css";
+import "../Stylesheet/NavBar.css";
 
 const NavBar = () => {
   const location = useLocation();

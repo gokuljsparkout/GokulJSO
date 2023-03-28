@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import PropTypes from "prop-types";
 
-import "../ProductList.css";
+import "../Stylesheet/ProductList.css";
 
 const ProductList = ({ product }) => {
   const { id, thumbnail, title, price } = product;

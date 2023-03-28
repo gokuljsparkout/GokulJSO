@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import "../ProductDetailsPage.css";
+
 import Loader from "./Loader";
+
+import "../Stylesheet/ProductDetailsPage.css";
 
 const ProductDetailsPage = () => {
   const { id } = useParams();

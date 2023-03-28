@@ -198,6 +198,10 @@
   }
 }
 
-.options a{
-    color: #29f700;
+.box .basic-info .options a {
+  color: black;
+  font-size: 17px;
+  background-color: #29f700 !important;
+  border-color: grey;
+  font-weight: 600;
 }

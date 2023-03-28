@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GokulJSO/static/css/main.78973890.css",
-    "main.js": "/GokulJSO/static/js/main.d393dfd0.js",
-    "static/media/about.png": "/GokulJSO/static/media/about.921cab383b2ea9776781.png",
-    "static/media/bg.jpg": "/GokulJSO/static/media/bg.21d8697cd6b1f0c0c61d.jpg",
-    "index.html": "/GokulJSO/index.html",
-    "main.78973890.css.map": "/GokulJSO/static/css/main.78973890.css.map",
-    "main.d393dfd0.js.map": "/GokulJSO/static/js/main.d393dfd0.js.map"
+    "main.css": "/static/css/main.669e5d10.css",
+    "main.js": "/static/js/main.66af7003.js",
+    "static/media/about.png": "/static/media/about.921cab383b2ea9776781.png",
+    "static/media/bg.jpg": "/static/media/bg.21d8697cd6b1f0c0c61d.jpg",
+    "index.html": "/index.html",
+    "main.669e5d10.css.map": "/static/css/main.669e5d10.css.map",
+    "main.66af7003.js.map": "/static/js/main.66af7003.js.map"
   },
   "entrypoints": [
-    "static/css/main.78973890.css",
-    "static/js/main.d393dfd0.js"
+    "static/css/main.669e5d10.css",
+    "static/js/main.66af7003.js"
   ]
 }
